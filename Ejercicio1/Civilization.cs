@@ -35,13 +35,44 @@ namespace Ejercicio1
 
         [JsonPropertyName("civilization_bonus")]
         public List<string> CivilizationBonus { get; set; }
-    }
+    
 
-    public class CivilizationLista
+   
+
+ 
+    public void mostrarCivilizacion() {
+    Console.WriteLine($"Id: { Id }");
+    Console.WriteLine($"Name: { Name }");
+    Console.WriteLine($"Expansion: { Expansion }");
+    Console.WriteLine($"ArmyType: { ArmyType }");
+    Console.WriteLine("UniqueUnit: ");
+    if (UniqueUnit != null) 
+    {
+      foreach (string uniqueUnit in UniqueUnit) {
+        Console.WriteLine(uniqueUnit);
+      };
+    };
+    Console.WriteLine("UniqueTech: ");
+    if (UniqueTech != null) 
+    {
+      foreach (string uniqueTech in UniqueTech) {
+        Console.WriteLine(uniqueTech);
+      };
+    };
+    Console.WriteLine("CivilizationBonus: ");
+    if (CivilizationBonus != null) 
+    {
+      foreach (string civilizationBonus in CivilizationBonus) {
+        Console.WriteLine( civilizationBonus);
+      };
+    };
+  }
+}
+
+ public class CivilizationLista
     {
         [JsonPropertyName("civilizations")]
         public List<Civilization> Civilizations { get; set; }
     }
 
-
-    }
+}

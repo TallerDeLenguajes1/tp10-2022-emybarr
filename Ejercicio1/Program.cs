@@ -13,7 +13,12 @@ namespace Ejercicio1{
         
         static void Main(string[] args) {
 
-           GetCivili();
+          var lista =  GetCivili();
+
+          
+          
+
+    
 
         }
 
@@ -34,6 +39,13 @@ namespace Ejercicio1{
                             foreach(Civilization civilization in cLista.Civilizations) {
                                 Console.WriteLine(civilization.Id + "- " + civilization.Name);
                             }
+
+                            foreach(Civilization civilization in cLista.Civilizations) {
+                               if(civilization.Name == "Celts"){
+                                 civilization.mostrarCivilizacion();
+                               }
+                            }
+
 
                         }
                     }
