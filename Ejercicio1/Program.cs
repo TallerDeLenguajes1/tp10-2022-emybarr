@@ -39,7 +39,7 @@ namespace Ejercicio1{
                     }
                 }
             } catch (WebException ex) {
-                Console.WriteLine("alto error");
+                Console.WriteLine("error");
             }
             return null;
         }
